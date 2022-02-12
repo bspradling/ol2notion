@@ -7,8 +7,10 @@ edition = "2021"
 
 [dependencies]
 anyhow = "1.0.53"
-notion = "0.3.4"
-open-library = "0.7.0"
+futures = "0.3.21"
+notion = { git = "https://github.com/bspradling/notion", branch = "feature/create-page" }
+open-library = "0.7.1"
+rand = "0.8.4"
 structopt = "0.3.26"
 tokio = "1.16.1"
 

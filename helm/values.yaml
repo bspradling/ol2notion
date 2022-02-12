@@ -1,0 +1,18 @@
+name: ol2notion
+image:
+  repository: ol2notion
+  tag: latest
+  imagePullPolicy: IfNotPresent
+schedule: "*/30 * * * *"
+failedJobsHistoryLimit: 1
+successfulJobsHistoryLimit: 3
+concurrencyPolicy: Allow
+restartPolicy: OnFailure
+env:
+  - name: NOTION_DATABASE
+    value: Reading
+  - name: OPEN_LIBRARY_USERNAME
+    value: brettspradling
+envFrom:
+  - secretRef:
+    name: ol2notion
