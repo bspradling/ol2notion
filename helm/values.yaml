@@ -1,6 +1,6 @@
 name: ol2notion
 image:
-  repository: ol2notion
+  repository: ghcr.io/bspradling/ol2notion
   tag: latest
   imagePullPolicy: IfNotPresent
 schedule: "*/30 * * * *"
@@ -9,10 +9,10 @@ successfulJobsHistoryLimit: 3
 concurrencyPolicy: Allow
 restartPolicy: OnFailure
 env:
-  - name: NOTION_DATABASE
-    value: Reading
-  - name: OPEN_LIBRARY_USERNAME
-    value: brettspradling
+- name: NOTION_DATABASE
+  value: Reading
+- name: OPEN_LIBRARY_USERNAME
+  value: brettspradling
 envFrom:
-  - secretRef:
+- secretRef:
     name: ol2notion
